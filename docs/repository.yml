@@ -3,7 +3,7 @@ name: AWS S3 IAM Policy for CI
 slug: iam-s3-cicd
 project: infraprints
 namespace: [terraform, aws]
-description: Describes a container auto-scaling policy controlled by a SQS resource.
+description: Describes an IAM Policy for deploying artifacts to S3.
 license:
   name: MIT
 tags:
