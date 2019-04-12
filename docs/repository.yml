@@ -1,5 +1,5 @@
 ---
-name: Terraform AWS ECS Autoscaling by SQS
+name: AWS S3 IAM Policy for CI
 slug: iam-s3-cicd
 project: infraprints
 namespace: [terraform, aws]
