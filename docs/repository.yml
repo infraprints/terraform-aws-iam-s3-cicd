@@ -1,0 +1,15 @@
+---
+name: AWS S3 IAM Policy for CI
+slug: iam-s3-cicd
+project: infraprints
+namespace: [terraform, aws]
+description: Describes an IAM Policy for deploying artifacts to S3.
+license:
+  name: MIT
+tags:
+  - terraform
+  - terraform-module
+  - aws
+  - aws-s3
+  - aws-iam
+  - policy
