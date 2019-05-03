@@ -3,7 +3,7 @@ resource "aws_iam_policy" "s3" {
   name        = "${var.name}"
   description = "${var.description}"
   path        = "${var.path}"
-  policy      = "${data.aws_iam_policy_document.s3_policy.json}"
+  policy      = "${data.aws_iam_policy_document.s3.json}"
 }
 
 data "aws_iam_policy_document" "s3" {
