@@ -7,7 +7,7 @@ variable "name" {
 variable "policy" {
   type        = "string"
   description = "Determines if the IAM Policy will be created."
-  default     = "true"
+  default     = true
 }
 
 variable "description" {

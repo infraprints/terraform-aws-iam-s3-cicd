@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "s3" {
-  count       = "${var.policy == "" ? 0 : 1}"
+  count       = "${var.policy == "true" ? 1 : 0}"
   name        = "${var.name}"
   description = "${var.description}"
   path        = "${var.path}"
