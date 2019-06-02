@@ -1,9 +1,9 @@
 resource "aws_iam_policy" "s3" {
-  count       = "${var.policy == "true" ? 1 : 0}"
-  name        = "${var.name}"
-  description = "${var.description}"
-  path        = "${var.path}"
-  policy      = "${data.aws_iam_policy_document.s3.json}"
+  count       = var.policy == "true" ? 1 : 0
+  name        = var.name
+  description = var.description
+  path        = var.path
+  policy      = data.aws_iam_policy_document.s3.json
 }
 
 data "aws_iam_policy_document" "s3" {
@@ -11,7 +11,7 @@ data "aws_iam_policy_document" "s3" {
     sid       = "ListBucket"
     effect    = "Allow"
     actions   = ["s3:ListBucket"]
-    resources = ["${var.bucket_arn}"]
+    resources = var.bucket_arn
   }
 
   statement {
@@ -21,3 +21,4 @@ data "aws_iam_policy_document" "s3" {
     resources = ["${var.bucket_arn}/${var.path}"]
   }
 }
+
